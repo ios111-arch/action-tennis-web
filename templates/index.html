@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎾 Action Tennis Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎾 Action Tennis vs CPU 🎾</h1>
+        
+        <div class="score-display">
+            <div class="score" id="player-score">Player: 0</div>
+            <div class="score" id="cpu-score">CPU: 0</div>
+        </div>
+        
+        <div class="smash-stats" id="smash-stats">
+            Player Smashes: 0 | CPU Smashes: 0
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start">ゲーム開始</button>
+            <button id="pauseBtn" class="btn btn-pause">一時停止</button>
+            <button id="resetBtn" class="btn btn-reset">リセット</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>🎮 操作方法</h3>
+            <div class="instruction-content">
+                <p>🕹️ 矢印キー: ↑（上移動） ↓（下移動） ←（左移動） →（右移動）</p>
+                <p>🎯 目標: CPU相手にボールを打ち返してポイントを獲得しよう！</p>
+                <p>🏆 勝利条件: 先に10ポイント獲得したプレイヤーの勝利</p>
+                <p>⚡ 🔥SMASH🔥: ボールの進行方向と逆に動きながら打つとスマッシュ発動！</p>
+                <p>💪 チャージ: 同じ方向に動き続けるとパワーアップ、スマッシュがより強力に！</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

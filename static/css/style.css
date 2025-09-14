@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1B5E20, #2E7D32);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.score-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.smash-stats {
+    color: #FFD700;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#gameCanvas {
+    background: #2E7D32;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.btn-start {
+    background: #4CAF50;
+    color: black;
+}
+
+.btn-start:hover {
+    background: #45a049;
+}
+
+.btn-pause {
+    background: #FF9800;
+    color: black;
+}
+
+.btn-pause:hover {
+    background: #e68900;
+}
+
+.btn-reset {
+    background: #F44336;
+    color: black;
+}
+
+.btn-reset:hover {
+    background: #da190b;
+}
+
+.instructions {
+    background: rgba(240, 248, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.instructions h3 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.instruction-content {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.instruction-content p {
+    margin-bottom: 8px;
+    color: #E3F2FD;
+}
+
+@media (max-width: 850px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .score-display {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+}
