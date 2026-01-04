@@ -20,7 +20,7 @@ OPTIONS = {
         'LSMinimumSystemVersion': '10.13',
     }
 }
-
+// Test Github rule
 setup(
     app=APP,
     data_files=DATA_FILES,
